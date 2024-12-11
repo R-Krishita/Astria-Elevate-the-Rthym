@@ -5,7 +5,8 @@ body{
 nav{
     margin: var(--margin);
     padding: 2px;
-    position: absolute;
+    position: relative;
+    width: 90vw;
 }
 
 .brand-logo img{
@@ -86,4 +87,33 @@ nav{
 
 .right{
     width: 75vw;
+}
+
+.parentflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px;
+    padding: 2px;
+}
+.left{
+    
+    /* position: relative; */
+    left: 10px;
+    height: 75vh;
+    width: 25vw;
+    /* border: 2px solid white; */
+    background-color: rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
+}
+.right{
+    
+    position: relative;
+    left: 10px;
+    height: 75vh;
+    width: 72vw;
+    /* border: 2px solid white; */
+    background-color: rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
 }
