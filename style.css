@@ -131,3 +131,50 @@ nav{
     background-color: rgba(40, 40, 40, 0.8);
     border-radius: 10px;
 }
+
+.footer flex{
+    margin : 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    bottom: 0;
+}
+
+.footer-left{
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    /* left: 10px; */
+    height: 10vh;
+    width: 15vw;
+    border-radius: 10px;
+}
+
+.footer-left p{
+    margin: 10px;
+    padding: 3px;
+}
+
+.footer-right{
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 35vw;
+}
+
+.footer-right p{
+    margin: 10px;
+    padding: 3px;
+}
