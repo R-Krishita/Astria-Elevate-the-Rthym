@@ -103,12 +103,12 @@ nav{
 
 
 /* main container styling */
-.parentflex{
-    display: flex;
+.parent{
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 50px;
+    margin: 10px;
     padding: 2px;
 }
 .left{
@@ -132,6 +132,10 @@ nav{
     border-radius: 10px;
 }
 
+
+
+
+/* footer styling */
 .footer flex{
     margin : 10px;
     padding: 5px;
