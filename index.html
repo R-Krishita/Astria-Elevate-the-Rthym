@@ -11,11 +11,14 @@
 
     <!-- navbar -->
     <nav class="flex">
+
+        <!-- brand logo -->
         <div class="brand-logo img">
             <img src="svg/spotify.svg" alt="spotify">
         </div>
 
-        <div class="home">
+        <!-- home button and search bar -->
+        <div class=" flex home">
             <button class = "home-button" type="button">
                 <img src="svg/home.svg" alt="home">
             </button>
@@ -25,31 +28,41 @@
                 <img src="svg/browse.svg" alt="browse">
             </div>
         </div>
-        <div class="pfp">
-            <button type="button" class = "navbell">
-                <img src="svg/bell.svg" alt="bell">
+
+        <!-- bell and pfp -->
+        <div class="flex pfp">
+            <button type="button" class = "navsignup">
+                <!-- <img src="svg/bell.svg" alt="bell"> -->
+                 Sign Up
             </button>
-            <button type="button" class = "navpfp">
-                <img src="svg/pfp.svg" alt="pfp" height="30px" width="30px">
+            <button type="button" class = "navlogin">
+                <!-- <img src="svg/pfp.svg" alt="pfp" height="30px" width="30px"> -->
+                 Log In
             </button>
         </div>
     </nav>
 
+
     <!-- main content -->
-    <div class="parent flex">
+    <div class="flex parent">
+
+        <!-- left side -->
         <div class="left">
 
         </div>
+
+        <!-- right side -->
         <div class="right">
 
-        
+            
+            <!-- footer start -->
             <footer>
-                <div class="footer flex">
-                    <div class="footer-left">
-                        <img src="svg/spotify.svg" alt="spotify">
+                <div class="flex footer">
+                    <div class=" flex footer-left">
+                        <img src="svg/spotify.svg" alt="spotify" height="20px" width = "20px">
                         <p>2024 Spotify AB</p>
                     </div>
-                    <div class="footer-right">
+                    <div class="footer-right flex">
                         <p>Legal</p>
                         <p>Privacy Center</p>
                         <p>Privacy Policy</p>
@@ -58,19 +71,25 @@
                     </div>
                 </div>
             </footer>
+            <!-- footer end -->
         </div>
     </div>
 
-    <!-- playbar -->
-     <div class="playbar">
-        <div class="playbar-left">
+    <!-- playbar start -->
+     <div class=" flex playbar">
+
+        <!-- playbar left side start -->
+        <div class=" flex playbar-left">
             <img src="svg/album.svg" alt="album">
-            <div class="playbar-info">
+            <div class="flex playbar-info">
                 <p>Album Name</p>
                 <p>Artist Name</p>
             </div>
         </div>
-        <div class="playbar-center">
+        <!-- playbar left side end -->
+
+        <!-- playbar center start -->
+        <div class="flex playbar-center">
             <button type="button">
                 <img src="svg/prev.svg" alt="prev">
             </button>
@@ -81,7 +100,10 @@
                 <img src="svg/next.svg" alt="next">
             </button>
         </div>
-        <div class="playbar-right">
+        <!-- playbar center end -->
+
+        <!-- playbar right side start -->
+        <div class=" flex playbar-right">
             <button type="button">
                 <img src="svg/volume.svg" alt="volume">
             </button>
@@ -89,6 +111,8 @@
                 <img src="svg/fullscreen.svg" alt="fullscreen">
             </button>
         </div>
+        <!-- playbar right side end -->
      </div>
+    <!-- playbar end -->
 </body>
 </html>
