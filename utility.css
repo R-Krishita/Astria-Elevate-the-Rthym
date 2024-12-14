@@ -13,7 +13,7 @@
 .justify-space-between{
     justify-content: space-between;
 }
-:root{
-    margin: 5px;
-    padding: 2px;
+
+.invert{
+    filter: invert(1);
 }
