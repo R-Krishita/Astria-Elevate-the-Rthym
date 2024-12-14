@@ -1,0 +1,19 @@
+.black-border{
+    border: 2px solid black;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
+
+.invert{
+    filter: invert(1);
+}

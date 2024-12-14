@@ -1,0 +1,76 @@
+/* main container styling */
+.parent{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    padding: 2px;
+}
+.left{
+    left: 10px;
+    height: 75vh;
+    width: 25vw;
+    background-color: rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
+}
+.right{
+    position: relative;
+    left: 10px;
+    height: 75vh;
+    width: 72vw;
+    /* border: 2px solid white; */
+    background-color: rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
+}
+
+
+
+
+/* footer styling */
+.footer{
+    margin :2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 5vh;
+    width: 69vw;
+    bottom: 0;
+}
+
+.footer-left{
+    margin: var(--margin);
+    padding: var(--padding);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 5vw;
+    /* bottom: 0; */
+    height: 10vh;
+    width: 15vw;
+    border-radius: 10px;
+}
+
+.footer-left p{
+    margin: var(--margin);
+    padding: 3px;
+}
+
+.footer-right{
+    margin: var(--margin);
+    padding: var(--padding);
+    /* display: flex; */
+    justify-content: right;
+    align-items: center;
+    position: absolute;
+    /* bottom: 0; */
+    left: 35vw;
+}
+
+.footer-right p{
+    margin: var(--margin);
+    padding: 3px;
+}
