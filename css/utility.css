@@ -1,6 +1,11 @@
 .black-border{
     border: 2px solid black;
 }
+
+.default{
+    margin: 10px;
+    padding: 5px;
+}
 .flex{
     display: flex;
 }
@@ -16,4 +21,22 @@
 
 .invert{
     filter: invert(1);
+}
+
+.font{
+    font-family: "Poppins", sans-serif;
+    /* font-size: 1.2rem; */
+    font-style: normal;
+}
+
+
+.button{
+    margin: 10px;
+    padding: 5px;
+    font-size: small;
+    border-radius: 5px;
+    background-color: rgba(40, 40, 40, 0.8);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
