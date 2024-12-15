@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/utility.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/playbar.css">
 </head>
 <body>
 
@@ -25,18 +26,18 @@
             </button>
             <div class="search flex">
                 <img src="svg/search.svg" alt="search">
-                <input type="text" id="search" placeholder="What do you want to play?" >
+                <input type="text" id="search" placeholder="What do you want to play?" class = "font">
                 <img src="svg/browse.svg" alt="browse">
             </div>
         </div>
 
         <!-- bell and pfp -->
         <div class="flex pfp">
-            <button type="button" class = "navsignup">
+            <button type="button" class = "navsignup font">
                 <!-- <img src="svg/bell.svg" alt="bell"> -->
                  Sign Up
             </button>
-            <button type="button" class = "navlogin">
+            <button type="button" class = "navlogin font">
                 <!-- <img src="svg/pfp.svg" alt="pfp" height="30px" width="30px"> -->
                  Log In
             </button>
@@ -49,7 +50,12 @@
 
         <!-- left side -->
         <div class="left">
-
+            <div class="default flex library">
+                <button type="button" class = "button">
+                    <img src="svg/library.svg" alt="library" class = "invert" height = "30px" width = "30px">
+                </button>
+                <p class = "font">Your Library</p>
+            </div>
         </div>
 
         <!-- right side -->
@@ -59,16 +65,16 @@
             <!-- footer start -->
             <footer>
                 <div class="flex footer">
-                    <div class=" flex footer-left">
-                        <img src="svg/spotify.svg" alt="spotify" height="20px" width = "20px">
-                        <p>2024 Spotify AB</p>
+                    <div class="footer-left flex">
+                        <button type="button" class = "button font">Legal</button>
+                        <button type="button" class = "button font">Privacy Center</button>
+                        <button type="button" class = "button font">Privacy Policy</button>
+                        <button type="button" class = "button font">Cookies</button>
+                        <button type="button" class = "button font">About Ads</button>
                     </div>
                     <div class="footer-right flex">
-                        <button>Legal</button>
-                        <button>Privacy Center</button>
-                        <button>Privacy Policy</button>
-                        <button>Cookies</button>
-                        <button>About Ads</button>
+                        <img src="svg/spotify.svg" alt="spotify" height="20px" width = "20px">
+                        <p class = "font">2024 Spotify AB</p>
                     </div>
                 </div>
             </footer>
@@ -83,8 +89,8 @@
         <div class=" flex playbar-left">
             <img src="svg/album.svg" alt="album">
             <div class="flex playbar-info">
-                <p>Album Name</p>
-                <p>Artist Name</p>
+                <p class = "font default">Album Name</p>
+                <p class = "font default">Artist Name</p>
             </div>
         </div>
         <!-- playbar left side end -->
