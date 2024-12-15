@@ -1,0 +1,31 @@
+.playbar-left{
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    left: 2vw;
+    width: 35vw;
+    border-radius: 10px;
+}
+
+.playbar-info{
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.playbar-center{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 35vw;
+    border-radius: 10px;
+}
+
+.playbar-right{
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    right: 2vw;
+    width: 35vw;
+    border-radius: 10px;
+}
