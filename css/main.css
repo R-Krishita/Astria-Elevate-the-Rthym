@@ -5,6 +5,8 @@
     position: relative;
     margin: 10px;
     padding: 2px;
+    height: 75vh;
+    box-sizing: border-box;
 }
 
 /* left container */
@@ -12,14 +14,11 @@
     left: 10px;
     height: 75vh;
     width: 25vw;
-    background-color: rgba(40, 40, 40, 0.8);
     border-radius: 10px;
 }
 
 .library{
     position: relative;
-    /* margin : var(--margin); */
-    /* padding: var(--padding); */
 }
 
 .library img{
@@ -34,22 +33,42 @@
     color: white;
 }
 
+
 /* right container */
 .right{
+    flex-direction: column;
     position: relative;
     left: 10px;
     height: 75vh;
     width: 72vw;
-    background-color: rgba(40, 40, 40, 0.8);
     border-radius: 10px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 
+.right::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+/* Sptotify Playlists */
+.cardContainer{
+    /* margin: 10px; */
+    overflow-x: auto;
+    width: 72vw;
+}
+
+.cardContainer::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+.card{
+    flex: 0 0 15%;
+}
 
 /* footer styling */
 .footer{
     margin :2px;
+    margin-top: auto;
     padding: 2px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -62,12 +81,10 @@
 .footer-left{
     margin: var(--margin);
     padding: var(--padding);
-    /* display: flex; */
     justify-content: left;
     align-items: center;
     position: absolute;
     left: 2vw;
-    /* bottom: 0; */
     height: 10vh;
     width: 35vw;
     border-radius: 10px;
@@ -81,11 +98,9 @@
 .footer-right{
     margin: var(--margin);
     padding: var(--padding);
-    /* display: flex; */
     justify-content: right;
     align-items: center;
     position: absolute;
-    /* bottom: 0; */
     right: 1vw;
 }
 
