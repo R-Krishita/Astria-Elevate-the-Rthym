@@ -47,22 +47,56 @@
 }
 
 .right::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
+    display: none; /* Hides the  vertical scrollbar in this container*/
 }
 
 /* Sptotify Playlists */
 .cardContainer{
-    /* margin: 10px; */
     overflow-x: auto;
     width: 72vw;
+    justify-content: space-between;
 }
 
 .cardContainer::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
+    display: none; /* Hides the  horizontal scrollbar in this container */
 }
 .card{
-    flex: 0 0 15%;
+    flex: 0 0 15%;    /*each card takes 15% of the container */
+    border-radius: 10px;
 }
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card h3{
+    margin: 8px;
+    padding: 5px;
+    font-size: large;
+    color: white;
+}
+.card p{
+    margin: 8px;
+    padding: 5px;
+    font-size: small;
+    color: white;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
 
 /* footer styling */
 .footer{
