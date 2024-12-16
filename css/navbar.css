@@ -72,13 +72,18 @@ nav{
 .search input{
     margin: -1px;
     position: relative;
-    left: 45px;
+    left: 50px;
     height: 45  px;
-    width: 400px;
+    width: 500px;
     border: 2px solid rgb(34, 33, 33);
     background-color: rgb(34, 33, 33);
     border-radius: 30px;
     font-size: medium;
+    color: white;
+}
+
+.search input:focus{
+    outline: none;
 }
 
 
