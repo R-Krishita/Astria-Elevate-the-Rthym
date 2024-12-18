@@ -42,8 +42,8 @@
     height: 75vh;
     width: 72vw;
     border-radius: 10px;
-    overflow: hidden;
-    overflow-y: auto;
+    overflow: hidden;            
+    overflow-y: auto;       /* Vertical scroll */
 }
 
 .right::-webkit-scrollbar {
@@ -52,10 +52,10 @@
 
 /* Sptotify Playlists */
 .cardContainer{
-    overflow-x: auto;
+    overflow-x: auto;     /* Horizontal scroll */
     width: 72vw;
     justify-content: space-between;
-    position: absolute;
+    position: relative;
 }
 
 .cardContainer::-webkit-scrollbar {
@@ -120,7 +120,28 @@
 }
 
 
+/* horizontal scrolling buttons */
+/* .scroll-button {
+    background-color:rgb(26, 23, 23);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;        /* Ensure buttons are above the content 
+} */
+/* .scroll-button:hover {
+    background-color: rgb(47, 47, 47);
+}
 
+.scroll-button.left {
+    position: relative;
+    left: 0;
+}
+
+.scroll-button.right {
+    position: relative;
+    right: 0;
+} */
 
 
 

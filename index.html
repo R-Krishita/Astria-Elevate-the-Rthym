@@ -60,6 +60,9 @@
 
         <!-- right side -->
         <div class="right background-color flex">
+            <!-- <button class="scroll-button left button" onclick="scrollLeft()">
+                <img src="svg/previous-arrow.svg" alt="arrow" height = "50px" width = "50px">
+            </button>  -->
 
             <!-- Spotify Playlists -->
             <div class="spotifyPlaylists">
@@ -68,66 +71,73 @@
                 <!-- Card Container 1 -->
                 <div class="cardContainer flex font">
 
+                    <!-- button for left scroll -->
                     <div class="card background-color default">
-                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b7fd92108782021.5fc5820ec90ba.png" alt="img">
+                        <img src="album covers/img1.png" alt="img">
                         <h3>Discover Weekly</h3>
-                        <p>Your weekly mixtape of fresh music</p>
+                        <p>Your weekly mixtape of fresh music !</p>
                         <div class="greenbutton">
                             <button type="button" class = " button font" style="background-color: rgb(0, 255, 0);">
                                 <img src="svg/play.svg" alt="img">
                             </button>
                         </div>
                     </div>
+
                     <div class="card background-color default">
                         <img src="album covers/img2.png" alt="img">
-                        <h3>Discover Weekly</h3>
-                        <p>Your weekly mixtape of fresh music</p>
+                        <h3>Mixed Feels</h3>
+                        <p>Feel your own music :)</p>
                         <div class="greenbutton">
                             <button type="button" class = " button font" style="background-color: rgb(0, 255, 0);">
                                 <img src="svg/play.svg" alt="img">
                             </button>
                         </div>
                     </div>
+
                     <div class="card background-color default">
                         <img src="album covers/img3.jpg" alt="img">
-                        <h3>Discover Weekly</h3>
-                        <p>Your weekly mixtape of fresh music</p>
+                        <h3>The Weeknd</h3>
+                        <p>We don't Pray for LOVE, We just pray for Cars. Vroom...</p>
                         <div class="greenbutton">
                             <button type="button" class = " button font" style="background-color: rgb(0, 255, 0);">
                                 <img src="svg/play.svg" alt="img">
                             </button>
                         </div>
                     </div>
+
                     <div class="card background-color default">
                         <img src="album covers/img4.jpg" alt="img">
-                        <h3>Discover Weekly</h3>
-                        <p>Your weekly mixtape of fresh music</p>
+                        <h3>Ariana Grande</h3>
+                        <p>Happiness is the same price as Red Bottoms!</p>
                         <div class="greenbutton">
                             <button type="button" class = " button font" style="background-color: rgb(0, 255, 0);">
                                 <img src="svg/play.svg" alt="img">
                             </button>
                         </div>
                     </div>
+
                     <div class="card background-color default">
                         <img src="album covers/img5.jpg" alt="img">
-                        <h3>Discover Weekly</h3>
-                        <p>Your weekly mixtape of fresh music</p>
+                        <h3>Charlie Puth</h3>
+                        <p>How Long!</p>
                         <div class="greenbutton">
                             <button type="button" class = " button font" style="background-color: rgb(0, 255, 0);">
                                 <img src="svg/play.svg" alt="img">
                             </button>
                         </div>
                     </div>
+
                     <div class="card background-color default">
                         <img src="album covers/img6.jpg" alt="img">
-                        <h3>Discover Weekly</h3>
-                        <p>Your weekly mixtape of fresh music</p>
+                        <h3>Taylor Swift</h3>
+                        <p>1989 : Taylor's Version</p>
                         <div class="greenbutton">
                             <button type="button" class = " button font" style="background-color: rgb(0, 255, 0);">
                                 <img src="svg/play.svg" alt="img">
                             </button>
                         </div>
                     </div>
+
                     <div class="card background-color default">
                         <img src="album covers/img7.jpg" alt="img">
                         <h3>Discover Weekly</h3>
@@ -146,6 +156,9 @@
 
             </div>
 
+            <!-- <button class="scroll-button right button" onclick="scrollRight()">
+                <img src="svg/next-arrow.svg" alt="arrow" height = "50px" width = "50px">
+            </button> -->
             
             <!-- footer start -->
             <footer>
@@ -164,6 +177,7 @@
                 </div>
             </footer>
             <!-- footer end -->
+
         </div>
     </div>
 
@@ -182,14 +196,14 @@
 
         <!-- playbar center start -->
         <div class="flex playbar-center">
-            <button type="button">
-                <img src="" alt="prev">
+            <button type="button" class="button invert">
+                <img src="svg/previous.svg" alt="prev" height="25px" width="25px">
             </button>
-            <button type="button">
-                <img src="" alt="play">
+            <button type="button" class="button invert">
+                <img src="svg/play.svg" alt="play" height="25px" width="25px">
             </button>
-            <button type="button">
-                <img src="" alt="next">
+            <button type="button" class="button invert">
+                <img src="svg/next.svg" alt="next" height="25px" width="25px">
             </button>
         </div>
         <!-- playbar center end -->
@@ -199,12 +213,14 @@
             <button type="button">
                 <img src="" alt="volume">
             </button>
-            <button type="button">
-                <img src="" alt="fullscreen">
-            </button>
+            <!-- <button type="button">
+                <img src="svg/" alt="fullscreen">
+            </button> -->
         </div>
         <!-- playbar right side end -->
      </div>
     <!-- playbar end -->
+
+    <script src="script/script.js"></script>
 </body>
 </html>
