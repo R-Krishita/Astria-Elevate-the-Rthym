@@ -55,6 +55,7 @@
     overflow-x: auto;
     width: 72vw;
     justify-content: space-between;
+    position: absolute;
 }
 
 .cardContainer::-webkit-scrollbar {
@@ -62,13 +63,16 @@
 }
 .card{
     flex: 0 0 15%;    /*each card takes 15% of the container */
-    border-radius: 10px;
+    border-radius: 20px;
+    /* position: absolute; */
 }
 
 .card img{
     width: 100%;
     object-fit: contain;
     border-radius: 10px;
+    /* margin: 2px; */
+    /* padding: 3px; */
 }
 
 .card h3{
@@ -86,10 +90,34 @@
 
 .card:hover{
     cursor: pointer;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+    background-color: rgba(58, 58, 58, 0.8);
 }
 
 
+/* Playbutton in card styling */
+.greenbutton{
+    position: absolute;
+    left: 115px;
+    bottom: 165px;
+    height: 30px;
+    width: 30px;
+    border-radius: 25px;
+}
+.greenbutton button{
+    border-radius: 35px;
+}
+
+.greenbutton button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.greenbutton img{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+}
 
 
 
