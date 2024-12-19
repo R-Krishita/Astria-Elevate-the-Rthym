@@ -47,7 +47,13 @@
 }
 
 .right::-webkit-scrollbar {
-    display: none; /* Hides the  vertical scrollbar in this container*/
+    /* display: none;         Hides the  vertical scrollbar in this container */
+    width : 12px;
+}
+
+.right::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 6px;
 }
 
 /* Sptotify Playlists */
@@ -59,8 +65,16 @@
 }
 
 .cardContainer::-webkit-scrollbar {
-    display: none; /* Hides the  horizontal scrollbar in this container */
+    /* display: none; Hides the  horizontal scrollbar in this container */
+    width : 4px;
 }
+
+.cardContainer::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 15px;
+}
+
+
 .card{
     flex: 0 0 15%;    /*each card takes 15% of the container */
     border-radius: 20px;
