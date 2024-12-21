@@ -55,11 +55,8 @@ async function main(){
     // })
 
     audio.addEventListener("loadeddata",() => {
-        let duration = audio.duration;
-        console.log(duration)
+        console.log(audio.duration, audio.currentSrc,audio.currentTime)
     });
-
-    
 }
 main()
 
