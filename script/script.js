@@ -35,4 +35,31 @@ async function getSongs(){
     }
     return songs
 }
-getSongs()
+
+async function main(){
+    let songs = await getSongs()
+    console.log(songs)
+
+    // play the song only when the user clicks play button
+    var audio = new Audio(songs[0]);
+    document.getElementById("play").addEventListener("click",function() {
+        audio.play().catch(function(error){
+            console.log("Error occured while playing the song!",error);
+        });
+    });
+
+    // pause the song only when the user clicks pause button
+
+    // document.getElementById("pause").addEventListener("click",function(){
+    //     audio.pause();
+    // })
+
+    audio.addEventListener("loadeddata",() => {
+        let duration = audio.duration;
+        console.log(duration)
+    });
+
+    
+}
+main()
+
