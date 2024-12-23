@@ -8,6 +8,7 @@
 
 .library{
     position: relative;
+    justify-content: space-between;
 }
 
 .library img{
@@ -20,4 +21,24 @@
     width: 7vw;
     font-size: large;
     color: white;
+}
+
+.songList{
+    position: relative;
+    height: 60vh;
+    width: 24vw;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.songList ul li{
+    list-style-type: none;
+    gap :25px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+.songList ul li:hover{
+    background-color: rgba(58, 58, 58, 0.8);
 }
