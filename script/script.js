@@ -45,28 +45,25 @@ async function main(){
     // songUL.innerHTML = ""
     for (const song of songs) {
         let songName = song.split("/").pop().replaceAll("%20"," ").replaceAll(".mp3","");
-        songUL.innerHTML = songUL.innerHTML + `<li>${songName}</li>`;
+        songUL.innerHTML = songUL.innerHTML + `<li class = "grid">
+                        <img src="svg/music.svg" alt="img" width ="45px" height = "45px" class = "invert">
+                        <div class="musicInfo">
+                            <div>${songName}</div>
+                            <div>Song Artist</div>
+                        </div>
+                        
+                        <div class="playnow">
+                            <img src="svg/playgreen.svg" alt="img" class = "invert" height = "35px" width = "35px">
+                        </div>
+                    </li>`;
     }
 
-    // play the song only when the user clicks play button
-    var audio = new Audio(songs[0]);
-    document.getElementById("play").addEventListener("click",function() {
-        audio.play().catch(function(error){
-            console.log("Error occured while playing the song!",error);
+    // attach an event listener to each song
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click",()=>{
+            console.log(e.querySelector("div").firstElementChild.innerHTML)
         });
     });
-
-    // pause the song only when the user clicks pause button
-
-    // document.getElementById("pause").addEventListener("click",function(){
-    //     audio.pause();
-    // })
-
-    audio.addEventListener("loadeddata",() => {
-        console.log(audio.duration, audio.currentSrc,audio.currentTime)
-    });
-
-    }
-
+}
 main()
 
