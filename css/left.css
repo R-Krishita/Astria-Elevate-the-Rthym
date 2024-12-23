@@ -4,7 +4,9 @@
     height: 75vh;
     width: 25vw;
     border-radius: 10px;
+    overflow-y: auto;
 }
+
 
 .library{
     position: relative;
@@ -26,15 +28,26 @@
 .songList{
     position: relative;
     height: 60vh;
-    width: 24vw;
+    width: 25vw;
     border-radius: 10px;
-    overflow: hidden;
     box-sizing: border-box;
     overflow: hidden;
+    overflow-y: auto;
 }
+.songList::-webkit-scrollbar {
+    /* display: none;         Hides the  vertical scrollbar in this container */
+    width : 12px;
+}
+
+.songList::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 6px;
+}
+
 .songList ul li{
     list-style-type: none;
-    gap :25px;
+    gap: 10px;
+    width: 17vw;
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
