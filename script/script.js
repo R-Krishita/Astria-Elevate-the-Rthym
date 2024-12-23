@@ -36,9 +36,17 @@ async function getSongs(){
     return songs
 }
 
+
 async function main(){
     let songs = await getSongs()
     console.log(songs)
+
+    let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
+    // songUL.innerHTML = ""
+    for (const song of songs) {
+        let songName = song.split("/").pop().replaceAll("%20"," ").replaceAll(".mp3","");
+        songUL.innerHTML = songUL.innerHTML + `<li>${songName}</li>`;
+    }
 
     // play the song only when the user clicks play button
     var audio = new Audio(songs[0]);
@@ -57,6 +65,8 @@ async function main(){
     audio.addEventListener("loadeddata",() => {
         console.log(audio.duration, audio.currentSrc,audio.currentTime)
     });
-}
+
+    }
+
 main()
 
