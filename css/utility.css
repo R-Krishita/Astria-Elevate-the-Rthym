@@ -12,6 +12,9 @@
 .flex{
     display: flex;
 }
+.grid{
+    grid-template-columns: 50px 50px 50px;
+}
 .justify-center{
     justify-content: center;
 }
