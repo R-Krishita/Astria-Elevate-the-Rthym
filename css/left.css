@@ -1,0 +1,23 @@
+/* left container */
+.left{
+    left: 10px;
+    height: 75vh;
+    width: 25vw;
+    border-radius: 10px;
+}
+
+.library{
+    position: relative;
+}
+
+.library img{
+    height: 2vw;
+    width: 2vw;
+}
+
+.library p{
+    height: 1vw;
+    width: 7vw;
+    font-size: large;
+    color: white;
+}
