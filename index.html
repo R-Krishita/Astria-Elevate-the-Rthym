@@ -148,21 +148,21 @@
         <!-- playbar left side start -->
         <div class=" flex playbar-left">
             <img src="" alt="album">
-            <div class="flex playbar-info">
-                <p class = "font default">Album Name</p>
-                <p class = "font default">Artist Name</p>
+            <div class="playbar-info default font">
+                <!-- <p class = "font default">Album Name</p>
+                <p class = "font default">Artist Name</p> -->
             </div>
         </div>
         <!-- playbar left side end -->
 
         <!-- playbar center start -->
         <div class="flex playbar-center">
-            <button type="button" class="button invert" id = "previous">
+            <button type="button" class="button invert">
                 <img src="svg/previous.svg" alt="prev" height="25px" width="25px">
-            </button>
-            <button type="button" class="button invert" id = "play">
-                <img src="svg/play.svg" alt="play" height="35px" width="35px">
-            </button>
+            </button> 
+
+                <img src="svg/play.svg" alt="play"  id = "play" class = "invert" height="35px" width="35px">
+          
             <button type="button" class="button invert" id = "next">
                 <img src="svg/next.svg" alt="next" height="25px" width="25px">
             </button>
@@ -180,14 +180,21 @@
         </div>
         <!-- playbar right side end -->
 
-     </div>
+    </div>
     <!-- playbar end -->
+    
+   
+
 
     <!-- seekbar -->
-    <div class="seekbar">
-            <div class="circle">
-                
-            </div>
+    <div class="seekbar flex">
+        <div class="songTime">
+        
+        </div>
+
+        <div class="circle">
+            
+        </div>
     </div>
     <!-- seekbar end -->
 
