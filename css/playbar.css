@@ -9,6 +9,7 @@
 
 .playbar-info{
     position: relative;
+    
     border-radius: 10px;
 
 }
@@ -42,11 +43,18 @@
 .circle{
     position: relative;
     left: 0%;
-    bottom: 5px;
+    bottom: 6px;
     right: 2px;
     background-color: white;
     height: 20px;
     width: 20px;
     border-radius: 10px;
     transition: left 0.5s;
+}
+
+.songTime{
+    position: absolute;
+    left: -50px;
+    top: -7px;
+    color: white;
 }
