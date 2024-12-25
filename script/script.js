@@ -120,7 +120,7 @@ async function main(){
 
 
 
-    // attach event listener to previous,play and next button
+    // attach event listener to play button
     play.addEventListener("click", () => {
         if(currentSong.paused){
             currentSong.play()
@@ -150,6 +150,27 @@ async function main(){
         let duration = currentSong.duration;
         let seekTime = (e.offsetX / e.target.clientWidth) * duration;
         currentSong.currentTime = seekTime;
+    })
+
+    //attach an event listener to next button
+    next.addEventListener("click",() => {
+        let nextSong = songs.indexOf(currentSong.src) + 1;
+        // console.log(nextSong)
+        // console.log(songs[nextSong].split("/songs/").pop())
+        playMusic(songs[nextSong].split("/songs/").pop(), artists[nextSong], false)
+    });
+
+
+    //attach an event listener to previous button
+    previous.addEventListener("click",() => {
+        let previousSong = songs.indexOf(currentSong.src) - 1;
+        console.log(previousSong)
+        if(previousSong = 0){
+            currentSong.currentTime = 0;
+            currentSong.play();
+        } else{
+            playMusic(songs[previousSong].split("/songs/").pop(), artists[previousSong], false)
+        };
     })
 }
 main()
