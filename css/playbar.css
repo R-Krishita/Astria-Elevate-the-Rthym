@@ -33,7 +33,7 @@
 
 .seekbar{
     position: relative;
-    left: 34vw;
+    left: 35vw;
     width: 30vw;
     height: 1vh;
     border-radius: 10px;
@@ -41,20 +41,29 @@
 }
 
 .circle{
-    position: relative;
+    position: absolute;
     left: 0%;
-    bottom: 6px;
-    right: 2px;
+    bottom: -7px;
     background-color: white;
     height: 20px;
     width: 20px;
     border-radius: 10px;
     transition: left 0.5s;
+    cursor : pointer;
 }
 
 .songTime{
     position: absolute;
-    left: -50px;
+    left: -5vw ;
     top: -7px;
     color: white;
+}
+
+.seekbar-fill {
+    width: 20px;
+    height: 1vh;
+    background-color: #4caf50;
+    position: absolute;
+    left: 0%;
+    transition: left 1s;
 }
