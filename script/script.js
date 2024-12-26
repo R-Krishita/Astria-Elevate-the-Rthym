@@ -90,7 +90,7 @@ async function main(){
     for (i=0; i<songs.length; i++) {
         let song = songs[i];
         let artist = artists[i] || "Unknown Artist";
-        let songName = song.split("/").pop().replaceAll("%20"," ").replaceAll(".mp3","");
+        let songName = song.split("/").pop().replaceAll("%20"," ");
         songUL.innerHTML = songUL.innerHTML + `<li class = "grid">
                         <img src="svg/music.svg" alt="img" width ="45px" height = "45px" class = "invert">
                         <div class="musicInfo">
@@ -99,7 +99,7 @@ async function main(){
                         </div>
                         
                         <div class="playnow">
-                            <img src="svg/playgreen.svg" alt="img" class = "invert" height = "35px" width = "35px">
+                            <img src="svg/playgreen.svg" alt="img" class = "invert" height = "25px" width = "25px">
                         </div>
                     </li>`;
     }
@@ -148,29 +148,50 @@ async function main(){
     //attach an eventlistener to seekbar
     document.querySelector(".seekbar").addEventListener("click",(e)=>{
         let duration = currentSong.duration;
-        let seekTime = (e.offsetX / e.target.clientWidth) * duration;
+        let seekbar = document.querySelector(".seekbar");
+        let rect = seekbar.getBoundingClientRect();
+        let offsetX = e.clientX - rect.left;
+        let seekTime = (offsetX / rect.width) * duration;
         currentSong.currentTime = seekTime;
     })
 
     //attach an event listener to next button
     next.addEventListener("click",() => {
+        currentSong.pause()
         let nextSong = songs.indexOf(currentSong.src) + 1;
         // console.log(nextSong)
-        // console.log(songs[nextSong].split("/songs/").pop())
+        console.log(songs[nextSong].split("/songs/").pop())
         playMusic(songs[nextSong].split("/songs/").pop(), artists[nextSong], false)
     });
 
 
     //attach an event listener to previous button
-    previous.addEventListener("click",() => {
-        let previousSong = songs.indexOf(currentSong.src) - 1;
+    // previous.addEventListener("click",() => {
+    //     let previousSong = songs.indexOf(currentSong.src) - 1;
+    //     console.log("this is prev index = " + previousSong)
+    //     if (previousSong < 0) {
+    //         previousSong = 0;
+    //     }
+    //     if (previousSong === 0) {
+    //         currentSong.currentTime = 0;
+    //         currentSong.play();
+    //     } else {
+    //         playMusic(songs[previousSong].split("/songs/").pop(), artists[previousSong], false);
+    //     }
+    //     // playMusic(songs[previousSong].split("/songs/").pop(), artists[previousSong], false)
+    // })
+
+
+    previous.addEventListener("click", () => {
+        // currentSong.pause()
+        console.log("Previous clicked")
+        let previousSong = songs.indexOf(currentSong.src.split("/songs/").pop())
         console.log(previousSong)
-        if(previousSong = 0){
-            currentSong.currentTime = 0;
-            currentSong.play();
-        } else{
-            playMusic(songs[previousSong].split("/songs/").pop(), artists[previousSong], false)
-        };
+        let index = songs.indexOf(currentSong.src.split("/songs/").pop())
+        console.log(index)
+        if ((index - 1) >= 0) {
+            playMusic(songs[index - 1],artists[index-1])
+        }
     })
 }
 main()
