@@ -73,6 +73,7 @@
     width: 20px;
     height: 1vh;
     background-color: #4caf50;
+    border-radius: 10px;
     position: absolute;
     left: 0%;
     transition: left 0.5s;

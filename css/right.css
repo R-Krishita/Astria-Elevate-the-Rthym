@@ -2,7 +2,7 @@
 .parent{
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     margin: 10px;
     padding: 2px;
     height: 75vh;
@@ -13,10 +13,10 @@
 /* right container */
 .right{
     flex-direction: column;
-    position: relative;
-    left: 10px;
+    position: absolute;
+    left: 27vw;
     height: 75vh;
-    width: 72vw;
+    width: 70vw;
     border-radius: 10px;
     /* overflow: hidden;             */
         /* Vertical scroll */
