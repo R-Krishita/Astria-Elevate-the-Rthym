@@ -155,43 +155,45 @@ async function main(){
         currentSong.currentTime = seekTime;
     })
 
+
+
     //attach an event listener to next button
     next.addEventListener("click",() => {
         currentSong.pause()
-        let nextSong = songs.indexOf(currentSong.src) + 1;
-        // console.log(nextSong)
-        console.log(songs[nextSong].split("/songs/").pop())
-        playMusic(songs[nextSong].split("/songs/").pop(), artists[nextSong], false)
+        let nextIndex = songs.indexOf(currentSong.src) + 1;
+
+        // debugging console.log statements
+        // console.log("nextIndex = " + nextIndex)
+        // console.log("songs.length = " + songs.length)
+        // console.log("song split = " + songs[nextIndex].split("/songs/"))
+
+        if(nextIndex >= songs.length ){
+            nextIndex = 0;
+            playMusic(songs[nextIndex].split("/songs/").pop(), artists[nextIndex], false);
+            // console.log("if statement nextIndex = " + songs.length - 1)
+        }else {
+            playMusic(songs[nextIndex].split("/songs/").pop(), artists[nextIndex], false);
+        }
     });
 
 
     //attach an event listener to previous button
-    // previous.addEventListener("click",() => {
-    //     let previousSong = songs.indexOf(currentSong.src) - 1;
-    //     console.log("this is prev index = " + previousSong)
-    //     if (previousSong < 0) {
-    //         previousSong = 0;
-    //     }
-    //     if (previousSong === 0) {
-    //         currentSong.currentTime = 0;
-    //         currentSong.play();
-    //     } else {
-    //         playMusic(songs[previousSong].split("/songs/").pop(), artists[previousSong], false);
-    //     }
-    //     // playMusic(songs[previousSong].split("/songs/").pop(), artists[previousSong], false)
-    // })
-
-
     previous.addEventListener("click", () => {
         currentSong.pause();
-        let currentIndex = songs.indexOf(currentSong.src.split("/").pop());
+        let currentIndex = songs.indexOf(currentSong.src);
         let previousIndex = currentIndex - 1;
+
+        // debugging console.log statements
+        // console.log("currentIndex = " + currentIndex)
+        // console.log("previousIndex = " + previousIndex)
+        // console.log("songs[previousIndex] = " + songs[previousIndex])
     
-        // if (previousIndex < 0) {
-        //     previousIndex = songs.length - 1; // Loop back to the last song if at the beginning
-        // }
-    
-        playMusic(songs[previousIndex].split("/songs/").pop(), artists[previousIndex], false);
+        if (previousIndex < 0) {
+            previousIndex = 0;
+            playMusic(songs[previousIndex].split("/songs/").pop(), artists[previousIndex], false);
+        } else{
+            playMusic(songs[previousIndex].split("/songs/").pop(), artists[previousIndex], false);
+        }
     });
 }
 main()
