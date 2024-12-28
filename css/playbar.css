@@ -1,39 +1,30 @@
 .playbar{
     position:fixed;
-    bottom: 0vh;
-    /* top: 20vh; */
+    top: 90vh;
 }
 
+/* left side */
 .playbar-left{
     justify-content: left;
     align-items: center;
     position: relative;
     left: 2vw;
+    width: 34vw;
+    border-radius: 10px;
+}
+
+/* center */
+.playbar-center{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 1vh;
     width: 35vw;
     border-radius: 10px;
 }
 
 .playbar-info{
     position: relative;
-    border-radius: 10px;
-
-}
-
-.playbar-center{
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 2vh;
-    width: 35vw;
-    border-radius: 10px;
-}
-
-.playbar-right{
-    justify-content: right;
-    align-items: center;
-    position: relative;
-    right: 10vw;
-    width: 35vw;
     border-radius: 10px;
 }
 
@@ -42,7 +33,7 @@
     left: 38vw;
     width: 29%;
     height: 1vh;
-    bottom: 1vh;
+    bottom: 0vh;
     border-radius: 10px;
     border: 2px solid white;
 }
@@ -67,4 +58,19 @@
     position: absolute;
     left: 0%;
     transition: left 0.5s;
+}
+
+/* right side */
+.playbar-right{
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    right: 9vw;
+    width: 30vw;
+    border-radius: 10px;
+}
+
+.volume{
+    position: relative;
+    left: 1vw;
 }
