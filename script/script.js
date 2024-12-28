@@ -90,7 +90,7 @@ async function main(){
     for (i=0; i<songs.length; i++) {
         let song = songs[i];
         let artist = artists[i] || "Unknown Artist";
-        let songName = song.split("/").pop().replaceAll("%20"," ");
+        let songName = song.split("/").pop().replaceAll("%20"," ").replaceAll(".mp3","");
         songUL.innerHTML = songUL.innerHTML + `<li class = "grid">
                         <img src="svg/music.svg" alt="img" width ="45px" height = "45px" class = "invert">
                         <div class="musicInfo">
@@ -124,11 +124,11 @@ async function main(){
     play.addEventListener("click", () => {
         if(currentSong.paused){
             currentSong.play()
-            play.src = "/svg/pause.svg"
+            play.src = "/svg/pause.svg";
         }
         else{
             currentSong.pause()
-            play.src = "/svg/play.svg"
+            play.src = "/svg/play.svg";
         }
     })
 
@@ -183,16 +183,16 @@ async function main(){
 
 
     previous.addEventListener("click", () => {
-        // currentSong.pause()
-        console.log("Previous clicked")
-        let previousSong = songs.indexOf(currentSong.src.split("/songs/").pop())
-        console.log(previousSong)
-        let index = songs.indexOf(currentSong.src.split("/songs/").pop())
-        console.log(index)
-        if ((index - 1) >= 0) {
-            playMusic(songs[index - 1],artists[index-1])
-        }
-    })
+        currentSong.pause();
+        let currentIndex = songs.indexOf(currentSong.src.split("/").pop());
+        let previousIndex = currentIndex - 1;
+    
+        // if (previousIndex < 0) {
+        //     previousIndex = songs.length - 1; // Loop back to the last song if at the beginning
+        // }
+    
+        playMusic(songs[previousIndex].split("/songs/").pop(), artists[previousIndex], false);
+    });
 }
 main()
 
