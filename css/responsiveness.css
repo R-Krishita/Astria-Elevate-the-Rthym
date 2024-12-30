@@ -6,13 +6,13 @@
         left: 0px;
     }
     .navbar .brand-logo{
-        width: 25vw;
+        width: 21vw;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
 
     .navbar .home-button{
-        display: none;;
+        display: none;
     }
 
     .navbar .search{
@@ -20,43 +20,95 @@
     }
 
     .navbar .pfp{
-        width: 20vw;
+        width: 25vw;
+        position: relative;
+        left: 1vw;
     }
+
+    /* main responsiveness */
     .parent{
         width: 100vw;
         left: 0px;
 
     }
+
+    /* Left container */
     .left{
         position: fixed;
         left: -100%;
         transition: all .3s;
         z-index: 1;
-        width: 373px;
         background-color: black;
         padding: 0;
         height: 100vh;
         top: 0;
+        width: 46vw;
     }
 
+    .left .library p{
+        width: 25vw;
+    }
+    .left .library .cross{
+        display: block;
+
+    }
+
+    .left .songList{
+        position: relative;
+        top: 2vh;
+        height: 90vh;
+        width: 46vw;
+    }
+
+    /* Right Container */
     .right{
         width: 100vw;
         left: 0px;
     }
 
+    .right .hamburger-right button{
+        position: relative;
+        left: 0px;
+        display: block;
+    }
+
+    .right h2{
+        position: relative;
+        left: 1vw;
+    }
+
+    .cardContainer{
+        position: relative;
+        height: 36vh;
+    }
+
+    .greenbutton{
+        display: none;
+    }
+
+    /* footer */
     .footer{
         width: 100vw;
         left: 0vw;
     }
     .footer-left{
-        width: 50vw;
-    }
-    .playbar{
-        width: 100vw;
+        width: 79vw;
     }
 
-    .pfp{
-        width: 50px;
-        height: 50px;
+
+    .footer-right{
+        display: none;
+    }
+
+    /* playbar */
+    .playbar{
+        width: 100vw;
+        position: fixed;
+        bottom: 5vh;
+    }
+
+    .songTime{
+        position: relative;
+        left: -10vw;
     }
 }

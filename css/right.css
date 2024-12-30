@@ -22,6 +22,10 @@
 }
 
 
+.hamburger-right button{
+    display: none;
+}
+
 /* Sptotify Playlists */
 .spotifyPlaylists{
     height: 63vh;
@@ -43,7 +47,7 @@
     overflow-x: auto;     /* Horizontal scroll */
     width: 72vw;
     height: 46vh;
-    justify-content: space-evenly;
+    justify-content: left;
     position: relative;
 }
 

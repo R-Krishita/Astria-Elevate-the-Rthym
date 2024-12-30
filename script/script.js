@@ -195,6 +195,17 @@ async function main(){
             playMusic(songs[previousIndex].split("/songs/").pop(), artists[previousIndex], false);
         }
     });
+
+
+    //attach an event listener to hamburger-right
+    document.getElementById("ham-right").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "0";
+    });
+
+    //attach event listener to clode button on left container
+    document.getElementById("cross").addEventListener("click", () => {
+        document.querySelector(".left").style.left = "-100%";
+    });
 }
 main()
 

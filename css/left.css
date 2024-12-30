@@ -11,21 +11,27 @@
 
 .library{
     position: relative;
-    justify-content: space-between;
 }
 
 .library img{
     height: 2vw;
-    width: 2vw;
+    /* width: 2vw; */
 }
 
 .library p{
+    position: relative;
     height: 1vw;
     width: 7vw;
     font-size: large;
     color: white;
+    left: 3vw;
 }
 
+.library .cross{
+    display: none;
+    position: relative;
+    left: 4vw;
+}
 .songList{
     position: relative;
     height: 60vh;
