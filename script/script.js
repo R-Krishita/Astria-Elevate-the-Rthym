@@ -206,6 +206,19 @@ async function main(){
     document.getElementById("cross").addEventListener("click", () => {
         document.querySelector(".left").style.left = "-100%";
     });
+
+    //attach event listener to search button
+    let isSearchBarOpen = false;
+    document.getElementById("search-icon").addEventListener("click", () => {
+        if (isSearchBarOpen) {
+            document.querySelector(".searchbar").style.display = "none";
+            document.querySelector(".search").style.width = "0";
+        } else {
+            document.querySelector(".searchbar").style.display = "block";
+            document.querySelector(".search").style.width = "70vw";
+        }
+        isSearchBarOpen = !isSearchBarOpen;
+    });
 }
 main()
 
