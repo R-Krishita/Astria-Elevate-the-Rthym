@@ -202,7 +202,7 @@ async function main(){
         document.querySelector(".left").style.left = "0";
     });
 
-    //attach event listener to clode button on left container
+    //attach event listener to close button on left container
     document.getElementById("cross").addEventListener("click", () => {
         document.querySelector(".left").style.left = "-100%";
     });
@@ -219,6 +219,39 @@ async function main(){
         }
         isSearchBarOpen = !isSearchBarOpen;
     });
+
+
+    //attach event listener to volume button
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("click", (e) => {
+
+        // debug console.log statements
+        // console.log(document.querySelector(".playbar-right>img"))
+        // console.log("Setting volume to", e.target.value, "/ 100")
+        currentSong.volume = parseInt(e.target.value) / 100
+        let volumeIcon = document.querySelector(".playbar-right>img");
+        if (currentSong.volume === 0) {
+            volumeIcon.src = "svg/volume-mute.svg";
+        } else if (currentSong.volume > 0 && currentSong.volume <= 0.5) {
+            volumeIcon.src = "svg/volume-low.svg";
+        } else {
+            volumeIcon.src = "svg/volume-high.svg";
+        }
+        });
+
+        //attach an event listener to control volume 
+        document.querySelector(".playbar-right>img").addEventListener("click", e=>{ 
+            if(e.target.src.includes("svg/volume-high.svg")){
+                e.target.src = e.target.src.replace("svg/volume-high.svg", "svg/volume-mute.svg")
+                currentSong.volume = 0;
+                document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
+            }
+            else if(e.target.src.includes("svg/volume-low.svg")){
+                e.target.src = e.target.src.replace("svg/volume-low.svg", "svg/volume-mute.svg")
+                currentSong.volume = 0.1;
+                document.querySelector(".range").getElementsByTagName("input")[0].value = 10;
+            }
+    
+        })
 }
 main()
 
