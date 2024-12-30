@@ -42,7 +42,7 @@
 .cardContainer{
     overflow-x: auto;     /* Horizontal scroll */
     width: 72vw;
-    height: 40vh;
+    height: 46vh;
     justify-content: space-evenly;
     position: relative;
 }

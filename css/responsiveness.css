@@ -1,4 +1,32 @@
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+
+    /* navbar responsiveness */
+    .navbar{
+        width: 100vw;
+        left: 0px;
+    }
+    .navbar .brand-logo{
+        width: 25vw;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .navbar .home-button{
+        display: none;;
+    }
+
+    .navbar .search{
+        width: 40vw;
+    }
+
+    .navbar .pfp{
+        width: 20vw;
+    }
+    .parent{
+        width: 100vw;
+        left: 0px;
+
+    }
     .left{
         position: fixed;
         left: -100%;
@@ -13,13 +41,22 @@
 
     .right{
         width: 100vw;
+        left: 0px;
     }
 
+    .footer{
+        width: 100vw;
+        left: 0vw;
+    }
+    .footer-left{
+        width: 50vw;
+    }
     .playbar{
         width: 100vw;
     }
 
-    .navbar{
-        width: 100vw;
+    .pfp{
+        width: 50px;
+        height: 50px;
     }
 }
