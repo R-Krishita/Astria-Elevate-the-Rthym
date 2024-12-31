@@ -17,7 +17,7 @@
 // }
 
 let currentSong = new Audio();
-let currentSongFolder;
+let currentFolder;
 let currentArtistFolder;
 
 
@@ -62,7 +62,7 @@ async function getArtists(aFolder){
 
 // function to play music
 const playMusic = (track,artist, pause = true) => {
-    currentSong.src = `/${currentSongFolder}/` + track
+    currentSong.src = `/${currentFolder}/` + track
     if(!pause){
         currentSong.play()
     }
@@ -83,6 +83,7 @@ function formatTime(seconds) {
 async function main(){
 
     let songs = await getSongs("songs/Mixed Feels")
+    console.log(songs)
     
     let artists = await getArtists("/Mixed Feels")
     console.log(artists)
@@ -169,20 +170,23 @@ async function main(){
     //attach an event listener to next button
     next.addEventListener("click",() => {
         currentSong.pause()
-        let nextIndex = songs.indexOf(currentSong.src) + 1;
+        let currentIndex = songs.findIndex(song => song.includes(currentSong.src.split("/").pop()));
+        // let currentIndex = songs.indexOf(currentSong.src);
+        let nextIndex = currentIndex + 1;
+        let nextSong = songs[nextIndex].split("/").pop();
 
         // debugging console.log statements
-        // console.log("nextIndex = " + nextIndex)
-        // console.log("songs.length = " + songs.length)
-        // console.log("song split = " + songs[nextIndex].split("/songs/"))
-
+        console.log("nextIndex = " + nextIndex)
+        console.log("songs.length = " + songs.length)
+        console.log("song split = " + songs[nextIndex].split(`/${currentFolder}/`).pop())
+        
+        
         if(nextIndex >= songs.length ){
             nextIndex = 0;
-            playMusic(songs[nextIndex].split(`${currentFolder}`).pop(), artists[nextIndex], false);
+            // console.log("if statement nextSong = " + nextSong)
             // console.log("if statement nextIndex = " + songs.length - 1)
-        }else {
-            playMusic(songs[nextIndex].split(`${currentFolder}`).pop(), artists[nextIndex], false);
         }
+        playMusic(nextSong, artists[nextIndex], false);
     });
 
 
@@ -190,7 +194,7 @@ async function main(){
     //attach an event listener to previous button
     previous.addEventListener("click", () => {
         currentSong.pause();
-        let currentIndex = songs.indexOf(currentSong.src);
+        let currentIndex = songs.findIndex(song => song.includes(currentSong.src.split("/").pop()));
         let previousIndex = currentIndex - 1;
 
         // debugging console.log statements
@@ -198,12 +202,12 @@ async function main(){
         // console.log("previousIndex = " + previousIndex)
         // console.log("songs[previousIndex] = " + songs[previousIndex])
     
+        let previousSong = songs[previousIndex].split("/").pop();
         if (previousIndex < 0) {
-            previousIndex = 0;
-            playMusic(songs[previousIndex].split(`${currentFolder}`).pop(), artists[previousIndex], false);
-        } else{
-            playMusic(songs[previousIndex].split(`${currentFolder}`).pop(), artists[previousIndex], false);
+            previousIndex = songs.length - 1;
         }
+
+        playMusic(previousSong, artists[previousIndex], false);
     });
 
 
@@ -279,12 +283,16 @@ async function main(){
         Array.from(document.getElementsByClassName("card")).forEach(e => { 
         e.addEventListener("click", async item => {
             console.log("Fetching Songs")
-            console.log("Fecthing folder path" + item.currentTarget.dataset.folder)
-            // let folder = item.currentTarget.dataset.folder;
-            // songs = await getSongs(`songs/${folder}`); 
-            // console.log("Fecthing songs path" + songs)
-            // artists = await getArtists(`${folder}`); 
-            playMusic(songs[0].split("/").pop(),artists[0],false)
+            let folder = item.currentTarget.dataset.folder;
+            // console.log("Fetching folder path = " + folder)
+            songs = await getSongs(`songs/${folder}`); 
+            // console.log("Fetching songs" + songs);
+            artists = await getArtists(`/${folder}`); 
+            // console.log("Fetching artists" + artists);
+            let firstSong = songs[0].split("/").pop();
+            // console.log("fetching playMusic songs = " + firstSong)
+            currentFolder = `songs/${folder}`;
+            playMusic(firstSong,artists[0],false)
 
 
             let songUL = document.querySelector(".left .songList ul");
