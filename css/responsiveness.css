@@ -1,3 +1,4 @@
+/* larger screen displays like tablet */
 @media (max-width: 1200px) {
 
     /* navbar responsiveness */
@@ -5,24 +6,32 @@
         width: 100vw;
         left: 0px;
     }
-    .navbar .brand-logo{
-        width: 21vw;
-        margin: 0px;
-        padding: 0px;        
-    }
-
-    .navbar .home-button{
-        display: none;
+    .navbar .brand-logo img{
+        width: 39vw;
+        height: 7vh;
+        margin: 0;
+        padding: 0;
     }
 
     .navbar .search{
+        width: 7vw;
+        position: relative;
+        left: 5vw;
+        z-index: 1;
+    }
+
+    .navbar #search{
+        display: none;
         width: 40vw;
     }
 
+    .navbar #browse{
+        display: none;
+    }
     .navbar .pfp{
-        width: 25vw;
+        width: 26vw;
         position: relative;
-        left: 1vw;
+        left: 5vw;
     }
 
     /* main responsiveness */
@@ -41,9 +50,13 @@
         padding: 0;
         height: 100vh;
         top: 0;
-        width: 46vw;
+        width: 50vw;
     }
 
+    .left .library {
+        position:sticky;
+        top: 0vh;
+    }
     .left .library p{
         width: 25vw;
     }
@@ -52,6 +65,9 @@
 
     }
 
+    .left .library button img{
+        height: 5vh;
+    }
     .left .songList{
         position: relative;
         top: 2vh;
@@ -107,15 +123,19 @@
     .playbar{
         width: 100vw;
         position: fixed;
-        bottom: 5vh;
+        bottom: 4vh;
     }
 
     .songTime{
         position: relative;
         left: -10vw;
     }
+    .seekbar{
+        bottom: -3vh;
+    }
 }
 
+/* mobile screens width */
 @media (max-width:500px){
     /* navbar */
     .navbar{
@@ -143,7 +163,7 @@
     }
     .navbar .pfp{
         position: relative;
-        left: 25vw;
+        left: 10vw;
         width: 50vw;
     }
 
@@ -160,8 +180,16 @@
         width: 99vw;
     }
 
+    .left .library {
+        position:sticky;
+        top: 0vh;
+    }
     .left .library{
         justify-content: space-around;
+    }
+
+    .left .library button img{
+        height: 5vh;
     }
 
     .left .songList{
@@ -197,7 +225,7 @@
     }
     /* playbar */
     .playbar{
-        bottom: 6vh;
+        bottom: 2vh;
     }
     .playbar .playbar-left img{
         display: none;
@@ -213,6 +241,9 @@
         position: relative;
         left: 32vw;
         top: -6px;
+    }
+    .seekbar{
+        bottom: -1vh;
     }
 
 }

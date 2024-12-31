@@ -213,9 +213,12 @@ async function main(){
         if (isSearchBarOpen) {
             document.querySelector(".searchbar").style.display = "none";
             document.querySelector(".search").style.width = "0";
+            document.querySelector(".pfp").style.display = "block";
+            document.querySelector(".pfp").style.left = "20vw";
         } else {
             document.querySelector(".searchbar").style.display = "block";
-            document.querySelector(".search").style.width = "70vw";
+            document.querySelector(".search").style.width = "55vw";
+            document.querySelector(".pfp").style.display = "none";
         }
         isSearchBarOpen = !isSearchBarOpen;
     });
