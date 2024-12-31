@@ -65,7 +65,8 @@
 .card{
     flex: 0 0 15%;    /*each card takes 15% of the container */
     border-radius: 20px;
-    /* position: absolute; */
+    position: relative;
+    transition: all 0.9s;
 }
 
 .card img{
@@ -98,9 +99,9 @@
 
 /* Playbutton in card styling */
 .greenbutton{
-    position: relative;
-    left: 115px;
-    bottom: 165px;
+    position: absolute;
+    left: 7vw;
+    bottom: 23vh;
     height: 30px;
     width: 30px;
     border-radius: 25px;
