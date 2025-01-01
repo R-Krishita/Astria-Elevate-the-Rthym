@@ -359,8 +359,13 @@ async function main()
         }
         else if(e.target.src.includes("svg/volume-low.svg")){
             e.target.src = e.target.src.replace("svg/volume-low.svg", "svg/volume-mute.svg")
-            currentSong.volume = 0.1;
-            document.querySelector(".range").getElementsByTagName("input")[0].value = 10;
+            currentSong.volume = 0;
+            document.querySelector(".range").getElementsByTagName("input")[0].value = 0;
+        }
+        else{
+            e.target.src = e.target.src.replace("svg/volume-mute.svg","svg/volume-low.svg")
+            currentSong.volume = 0.2;
+            document.querySelector(".range").getElementsByTagName("input")[0].value = 20;
         }
 
     });
